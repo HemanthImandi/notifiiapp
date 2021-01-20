@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/custom_message_layout"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="yes"
+        android:focusable="true"
+        android:contentDescription="@string/custom_message"
+        android:layout_marginTop="@dimen/frame_margin"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/custom_message"
+            style="@style/NoPaddingTextViewStyle"/>
+
+        <ImageView
+            android:id="@+id/star_custom_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:scaleType="center"
+            android:src="@drawable/ic_star"
+            android:paddingLeft="5dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <!--<EditText
+        android:id="@+id/editTextCustomMessage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/picture_icon_height"
+        android:layout_marginTop="@dimen/pkgIn_edit_margin_top"
+        android:gravity="top|left"
+        android:maxLines="3"
+        android:minLines="3"
+        android:contentDescription="Custom message"
+        android:padding="5dp"
+        android:imeOptions="actionDone"
+        android:singleLine="false"
+        style="@style/EditTextStyle"/>-->
+    <!--<EditText
+        android:id="@+id/editTextCustomMessage"
+        style="@style/EditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/contact_us_msg_height"
+        android:layout_marginTop="@dimen/pkgIn_edit_margin_top"
+        android:contentDescription="Custom message"
+        android:gravity="left"
+        android:padding="5dp"
+        android:singleLine="false"
+        android:maxLines="5"
+        />-->
+
+    <EditText
+        android:id="@+id/editTextCustomMessage"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/item_margin"
+        android:contentDescription="Custom message"
+        style="@style/MultiLineEditTextStyle"/>
+</LinearLayout>

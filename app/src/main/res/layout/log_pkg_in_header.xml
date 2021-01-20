@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/layout_margin"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/biggest_textsize"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Recipient Name star"
+        android:focusable="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/pkg_login_recipient_lable"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:gravity="bottom"
+            android:text="@string/recipientName"
+            style="@style/NoPaddingTextViewStyle"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:paddingLeft="5dp"
+            android:src="@drawable/ic_star" />
+
+        <LinearLayout
+            android:id="@+id/errorPkgLoginRecipientLL"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bounce_alert_height"
+            android:gravity="end"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="2dp"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="@dimen/biggest_textsize"
+                android:layout_height="@dimen/biggest_textsize"
+                android:layout_gravity="bottom"
+                android:background="@drawable/bg_sample_red"
+                android:gravity="center"
+                android:text="!"
+                android:textColor="@color/background_color"
+                android:textSize="@dimen/smallest_textsize"
+                android:textStyle="bold"
+                style="@style/NoPaddingTextViewStyle"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="33dp"
+            android:layout_height="@dimen/medium_textsize"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:visibility="invisible"
+            android:src="@drawable/ic_scan_icon" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/item_margin"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_recipientName"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/recipient_bg"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp">
+
+            <TextView
+                android:id="@+id/textViewAutoCompleteRecipient"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                style="@style/NoPaddingTextViewStyle"/>
+
+            <ImageView
+                android:id="@+id/imageButtonClear"
+                style="@style/ClearEditTextStyle"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/recipientNameFL">
+
+            <com.notifii.notifiiapp.customui.CustomAutoCompleteTextView
+                android:id="@+id/editTextRecipientName"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="@dimen/edittext_height"
+                android:contentDescription="Recipient"
+                android:imeOptions="actionDone"
+                android:inputType="textPersonName"
+                android:popupBackground="@drawable/spinner_list"
+                style="@style/EditTextStyle"/>
+
+            <ImageView
+                android:id="@+id/recipientNameClear"
+                android:contentDescription="Clear text"
+                android:visibility="gone"
+                style="@style/ClearEditTextStyle"/>
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/ocrIv"
+            android:layout_width="33dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:contentDescription="OCR scan"
+            android:src="@drawable/ic_scan_icon" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/biggest_textsize"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="@dimen/frame_margin"
+        android:importantForAccessibility="yes"
+        android:focusable="true"
+        android:contentDescription="Tracking Number Star"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="@string/tracking_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            style="@style/NoPaddingTextViewStyle"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:paddingLeft="5dp"
+            android:src="@drawable/ic_star" />
+
+        <LinearLayout
+            android:id="@+id/errorTrackingNumberLL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end"
+            android:tag="@string/avenir_roman"
+            android:layout_weight="1"
+            android:layout_marginLeft="2dp"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="@dimen/biggest_textsize"
+                android:layout_height="@dimen/biggest_textsize"
+                android:layout_gravity="bottom"
+                android:background="@drawable/bg_sample_red"
+                android:gravity="center"
+                style="@style/NoPaddingTextViewStyle"
+                android:text="!"
+                android:textColor="@color/background_color"
+                android:textSize="@dimen/smallest_textsize"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="33dp"
+            android:layout_height="@dimen/bounce_alert_height"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:visibility="invisible"
+            android:src="@drawable/ic_scanner_icon" />
+
+        <ImageView
+            android:layout_width="33dp"
+            android:layout_height="@dimen/bounce_alert_height"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_minus_square"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:layout_width="33dp"
+            android:layout_height="@dimen/bounce_alert_height"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_plus_square"
+            android:visibility="invisible" />
+
+
+    </LinearLayout>
+</LinearLayout>

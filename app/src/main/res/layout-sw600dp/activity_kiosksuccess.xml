@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".activities.KIOSKSuccessActivity">
+
+    <include layout="@layout/toolbar_main" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/errormessageFL"
+        android:background="@drawable/bg_errors"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/medium_textsize"
+            android:text="You must select a resident."
+            style="@style/NoPaddingTextViewStyle"
+            android:textColor="@color/red"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="X"
+            android:id="@+id/closeerrorTV"
+            android:padding="10dp"
+            android:clickable="true"
+            android:layout_gravity="end"
+            style="@style/NoPaddingTextViewStyle"
+            android:textSize="@dimen/medium_textsize"
+            android:textColor="@color/red"/>
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/kiosk_signature_pad_height"
+        android:layout_marginTop="20dp"
+        android:id="@+id/successmessageLL"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/bg_success_kiosk">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="THANK YOU!"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="60sp"
+            style="@style/NoPaddingTextViewStyle"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</LinearLayout>

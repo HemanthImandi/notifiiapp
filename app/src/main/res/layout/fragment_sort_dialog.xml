@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:minWidth="1000dp"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/medium_paading">
+        <TextView
+            android:id="@+id/title_filter_by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/NoPaddingTextViewStyle"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="@dimen/medium_paading"
+            android:text="@string/text_filter"
+            android:textSize="@dimen/biggest_textsize"
+            android:importantForAccessibility="yes"/>
+
+        <TextView
+            android:id="@+id/button_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:clickable="true"
+            android:paddingLeft="@dimen/medium_above_padding"
+            android:paddingRight="@dimen/medium_above_padding"
+            android:text="X"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/medium_above_textsize"
+            android:contentDescription="close filter by"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_mailRoom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pkgIn_edit_margin_top"
+            android:id="@+id/mailroomSpinnerFL"
+            android:background="@drawable/bg_edittext">
+
+            <Spinner
+                android:id="@+id/spinnerMailRoom"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:divider="#D3D3D3"
+                android:dividerHeight="1dp"
+                android:background="@null"
+                android:popupBackground="@drawable/spinner_list" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                style="@style/NoPaddingTextViewStyle"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:hint="@string/select_one"
+                android:contentDescription="Button to select carrier options"
+                android:id="@+id/mailroomText"/>
+
+            <ImageView
+                android:id="@+id/mailRoomButtonDownArrow"
+                android:layout_width="@dimen/close_icon_width"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|center"
+                android:layout_marginRight="5dp"
+                android:importantForAccessibility="no"
+                android:paddingLeft="9dp"
+                android:paddingRight="6dp"
+                android:src="@drawable/ic_spinner_down_arrow" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/title_sort_by"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/medium_paading"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="@dimen/medium_paading"
+        style="@style/NoPaddingTextViewStyle"
+        android:text="@string/text_sort_by"
+        android:textSize="@dimen/biggest_textsize"
+        android:visibility="visible" />
+
+    <ListView
+        android:id="@+id/filter_listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/medium_paading"
+        android:layout_weight="1"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="5dp"
+        android:paddingLeft="@dimen/medium_paading"
+        android:paddingRight="@dimen/medium_paading" />
+
+    <Button
+        android:id="@+id/buttonDone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/more_btns_height"
+        android:layout_margin="@dimen/medium_paading"
+        android:text="@string/done"
+        style="@style/ButtonStyle" />
+
+</LinearLayout>

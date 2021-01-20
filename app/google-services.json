@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "764700607572",
+    "firebase_url": "https://notifiitrack.firebaseio.com",
+    "project_id": "notifiitrack",
+    "storage_bucket": "notifiitrack.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:764700607572:android:f55092a5107fbaff0459c1",
+        "android_client_info": {
+          "package_name": "com.notifii.notifiiapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "764700607572-qq0r9sqv2hknk5eei4ngv4jbo9qjmua5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.notifii.notifiiapp",
+            "certificate_hash": "ee82466a017f14fae85a632986aeebd7f17d21cd"
+          }
+        },
+        {
+          "client_id": "764700607572-4n8dnnasbiogn5nlug7nv7khgdrukh16.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHieXroDgBc5QX9frmKQXyILMZF6XHFQQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "764700607572-4n8dnnasbiogn5nlug7nv7khgdrukh16.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "764700607572-frphv8vopojthpl26u2pqaethcrk5347.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.notifii.notifiiapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

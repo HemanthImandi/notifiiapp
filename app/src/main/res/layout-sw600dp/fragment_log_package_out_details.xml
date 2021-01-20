@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:signature="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_main" />
+
+    <ScrollView
+        android:id="@+id/main_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/textViewSelectedPackages"
+                style="@style/NoPaddingTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:paddingLeft="10dp"
+                android:text="jwnedcoijnbwc"
+                android:textColor="@color/lable_color"
+                android:textSize="@dimen/small_textsize" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/PkgrecyclerView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_et"
+                    android:cacheColorHint="@color/list_cache_colorHint"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="5dp"
+                    android:paddingRight="@dimen/item_margin"
+                    android:paddingBottom="@dimen/item_margin" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/packagestatusTV"
+                            style="@style/NoPaddingTextViewStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Package Status"
+                            android:textColor="@color/lable_color"
+                            android:textSize="@dimen/small_textsize" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_height="@dimen/edittext_height"
+                            android:layout_marginTop="@dimen/item_margin"
+                            android:id="@+id/pkgStatusFL"
+                            android:background="@drawable/bg_edittext">
+
+                            <Spinner
+                                android:id="@+id/spinnerPkcg"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:divider="#D3D3D3"
+                                android:dividerHeight="1dp"
+                                android:background="@null"
+                                android:popupBackground="@drawable/spinner_list" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/edittext_height"
+                                style="@style/NoPaddingTextViewStyle"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:hint="@string/select_one"
+                                android:contentDescription="Button to select package type options"
+                                android:id="@+id/pkgStatusTV"/>
+
+                            <ImageView
+                                android:id="@+id/pkgStatusButtonDownArrow"
+                                style="@style/DropDownArrowStyle"/>
+                        </FrameLayout>
+
+
+                        <!-- <FrameLayout
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_gravity="center_vertical"
+                             android:layout_marginTop="@dimen/log_pkg_in_margin_top"
+                             android:background="@drawable/bg_et">
+
+                             <Spinner
+                                 android:id="@+id/spinnerPkcg"
+                                 style="@style/mySpinnerStyle"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="@dimen/edittext_height"
+                                 android:layout_gravity="center_vertical"
+                                 android:background="@drawable/bg_edittext"
+                                 android:contentDescription="Button to select Package status options"
+                                 android:dropDownWidth="match_parent"
+                                 android:gravity="center_vertical"
+                                 android:popupBackground="@drawable/spinner_list"
+                                 android:spinnerMode="dropdown" />
+
+                             <ImageView
+                                 android:id="@+id/pkgStatusButtonDownArrow"
+                                 style="@style/DropDownArrowStyle"/>
+
+                         </FrameLayout>-->
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/mobile_sign_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/log_pkg_in_margin_top"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/signatureImageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/signaturepad_height"
+                            android:background="@drawable/bg_et"
+                            android:padding="2dp"
+                            android:scaleType="fitXY"
+                            android:visibility="gone" />
+
+
+                        <ImageView
+                            android:id="@+id/mobile_clear_sign"
+                            android:layout_width="@dimen/left_right_padding"
+                            android:layout_height="@dimen/left_right_padding"
+                            android:layout_gravity="right|top"
+                            android:layout_margin="10dp"
+                            android:contentDescription="@string/clear_signature"
+                            android:src="@drawable/ic_refresh_small_icon"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/btn_click_to_sign"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/more_btns_height"
+                            android:background="@drawable/bg_tap_here_btn_selector"
+                            android:gravity="center"
+                            android:tag="@string/avenir_medium"
+                            android:text="@string/click_to_sign"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/white"
+                            android:visibility="gone" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/lable_signature"
+                        style="@style/NoPaddingTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/log_pkg_in_margin_top"
+                        android:text="@string/sign_below"
+                        android:textColor="@color/lable_color"
+                        android:textSize="@dimen/small_textsize" />
+
+                    <FrameLayout
+                        android:id="@+id/tab_sign_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/log_pkg_in_margin_top"
+                        android:background="@drawable/bg_et"
+                        android:padding="3dp"
+                        android:visibility="visible">
+
+                        <!--<com.notifii.notifiiapp.customui.SignaturePad
+                            android:id="@+id/signature_pad"
+                            android:layout_width="fill_parent"
+                            android:layout_height="250dp"
+                            signature:penColor="@color/black" />-->
+
+                        <com.notifii.notifiiapp.customui.SignaturePad
+                            android:id="@+id/signature_pad"
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/signature_pad_height"
+                            signature:penColor="@color/black" />
+
+                        <ImageView
+                            android:id="@+id/tab_clear_sign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|top"
+                            android:layout_margin="3dp"
+                            android:background="@color/white"
+                            android:clickable="true"
+                            android:paddingLeft="10dp"
+                            android:contentDescription="@string/clear_signature"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:src="@drawable/ic_refresh_small_icon"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/textView_sign_here"
+                            style="@style/NoPaddingTextViewStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="SIGN HERE"
+                            android:textColor="@color/yash_color"
+                            android:textStyle="bold" />
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textViewNoteLabel"
+                            style="@style/NoPaddingTextViewStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/log_pkg_in_margin_top"
+                            android:layout_weight="1"
+                            android:text="staff"
+                            android:textColor="@color/lable_color"
+                            android:textSize="@dimen/small_textsize" />
+
+                        <TextView
+                            android:id="@+id/textView_tab_pictures_label"
+                            style="@style/NoPaddingTextViewStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/log_pkg_in_margin_top"
+                            android:layout_weight="1"
+                            android:paddingLeft="10dp"
+                            android:text="@string/pictures"
+                            android:textColor="@color/lable_color"
+                            android:textSize="@dimen/small_textsize" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/images_linear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/editTextNote"
+                            style="@style/MultiLineEditTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/item_margin"
+                            android:contentDescription="Staff notes" />
+
+                        <TextView
+                            android:id="@+id/textViewPhotosLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/log_pkg_in_margin_top"
+                            android:tag="@string/avenir_roman"
+                            android:text="@string/pictures"
+                            android:textColor="@color/lable_color"
+                            android:textSize="@dimen/small_textsize"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/log_pkg_in_margin_top"
+                            android:layout_weight="1" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:id="@+id/gap1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:contentDescription="@string/picture_1"
+                                    android:layout_gravity="center"
+                                    android:gravity="center">
+
+                                    <FrameLayout
+                                        android:id="@+id/fl_1"
+                                        android:contentDescription="@string/picture_1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:id="@+id/image_pick1"
+                                            android:layout_width="@dimen/contact_us_msg_height"
+                                            android:contentDescription="@string/picture_1"
+                                            android:layout_height="@dimen/contact_us_msg_height"
+                                            android:background="@android:color/transparent"
+                                            android:padding="1dp"
+                                            android:scaleType="centerCrop"
+                                            android:src="@drawable/ic_camera_icon" />
+
+                                        <ImageView
+                                            android:id="@+id/imageButtonClose1"
+                                            android:layout_width="@dimen/progressbar_width_height"
+                                            android:layout_height="@dimen/progressbar_width_height"
+                                            android:layout_gravity="right"
+                                            android:background="@android:color/transparent"
+                                            android:src="@drawable/ic_close"
+                                            android:contentDescription="@string/remove_pic"
+                                            android:visibility="gone" />
+
+                                    </FrameLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/gap2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:contentDescription="@string/picture_2"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="@dimen/high_padding"
+                                    android:gravity="left">
+
+                                    <FrameLayout
+                                        android:id="@+id/fl_2"
+                                        android:layout_width="wrap_content"
+                                        android:contentDescription="@string/picture_2"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="visible">
+
+                                        <ImageView
+                                            android:id="@+id/image_pick2"
+                                            android:layout_width="@dimen/contact_us_msg_height"
+                                            android:layout_height="@dimen/contact_us_msg_height"
+                                            android:contentDescription="@string/picture_2"
+                                            android:background="@android:color/transparent"
+                                            android:padding="1dp"
+                                            android:scaleType="centerCrop"
+                                            android:src="@drawable/ic_camera_icon" />
+
+                                        <ImageView
+                                            android:id="@+id/imageButtonClose2"
+                                            android:layout_width="@dimen/progressbar_width_height"
+                                            android:layout_height="@dimen/progressbar_width_height"
+                                            android:layout_gravity="right"
+                                            android:background="@android:color/transparent"
+                                            android:contentDescription="@string/remove_pic"
+                                            android:src="@drawable/ic_close"
+                                            android:visibility="gone" />
+
+                                    </FrameLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/gap3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:contentDescription="@string/picture_3"
+                                    android:layout_marginLeft="@dimen/high_padding"
+                                    android:gravity="left">
+
+                                    <FrameLayout
+                                        android:id="@+id/fl_3"
+                                        android:layout_width="wrap_content"
+                                        android:contentDescription="@string/picture_3"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="visible">
+
+                                        <ImageView
+                                            android:id="@+id/image_pick3"
+                                            android:layout_width="@dimen/contact_us_msg_height"
+                                            android:layout_height="@dimen/contact_us_msg_height"
+                                            android:background="@android:color/transparent"
+                                            android:contentDescription="@string/picture_3"
+                                            android:padding="1dp"
+                                            android:scaleType="centerCrop"
+                                            android:src="@drawable/ic_camera_icon" />
+
+                                        <ImageView
+                                            android:id="@+id/imageButtonClose3"
+                                            android:layout_width="@dimen/progressbar_width_height"
+                                            android:layout_height="@dimen/progressbar_width_height"
+                                            android:layout_gravity="right"
+                                            android:background="@android:color/transparent"
+                                            android:contentDescription="@string/remove_pic"
+                                            android:src="@drawable/ic_close"
+                                            android:visibility="gone" />
+                                    </FrameLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/buttonAdvancedOption"
+                        style="@style/TextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|left"
+                        android:layout_marginTop="@dimen/log_pkg_in_margin_top"
+                        android:background="@android:color/transparent"
+                        android:ellipsize="none"
+                        android:paddingLeft="0dp"
+                        android:paddingTop="@dimen/item_margin"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="@dimen/item_margin"
+                        android:text="@string/show_advanced_options"
+                        android:textAllCaps="false" />
+
+                    <LinearLayout
+                        android:id="@+id/sendNotificationsLL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/log_pkg_in_margin_top"
+                        android:visibility="gone">
+
+                        <TextView
+                            style="@style/NoPaddingTextViewStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Send Delivery Confirmation" />
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_height="@dimen/edittext_height"
+                            android:layout_marginTop="@dimen/item_margin"
+                            android:id="@+id/sendnotifii_flayout"
+                            android:background="@drawable/bg_edittext">
+
+                            <Spinner
+                                android:id="@+id/spinnerSendNotification"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:divider="#D3D3D3"
+                                android:dividerHeight="1dp"
+                                android:dropDownWidth="match_parent"
+                                android:background="@null"
+                                android:popupBackground="@drawable/spinner_list" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/edittext_height"
+                                style="@style/NoPaddingTextViewStyle"
+                                android:gravity="center_vertical"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:paddingLeft="10dp"
+                                android:hint="@string/select_one"
+                                android:contentDescription="Button to select package type options"
+                                android:id="@+id/sendNotificationsTV"/>
+
+                            <ImageView
+                                android:id="@+id/sendNotifiButtonDownArrow"
+                                style="@style/DropDownArrowStyle"/>
+                        </FrameLayout>
+
+
+                        <!--<FrameLayout
+                            android:id="@+id/sendnotifii_flayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/pkgIn_edit_margin_top"
+                            android:background="@drawable/bg_et">
+
+                            <Spinner
+                                android:id="@+id/spinnerSendNotification"
+                                style="@style/mySpinnerStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/edittext_height"
+                                android:background="@drawable/bg_edittext"
+                                android:contentDescription="Button to select send delivery confirmation options"
+                                android:gravity="center_vertical"
+                                android:popupBackground="@drawable/spinner_list"
+                                android:spinnerMode="dropdown" />
+
+
+                            <ImageView
+                                android:id="@+id/sendNotifiButtonDownArrow"
+                                style="@style/DropDownArrowStyle"/>
+                        </FrameLayout>-->
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/buttonIamDone"
+                    style="@style/ButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/more_btns_height"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="@string/submit" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

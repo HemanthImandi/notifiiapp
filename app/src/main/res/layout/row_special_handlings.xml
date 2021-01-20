@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/special_handling_layout"
+    android:orientation="horizontal"
+    android:paddingRight="5dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <ImageView
+        android:id="@+id/checkbox_1"
+        android:layout_width="@dimen/progressbar_width_height"
+        android:layout_height="@dimen/progressbar_width_height"
+        android:layout_gravity="top"
+        android:contentDescription="checkbox"
+        android:background="@drawable/ic_check_default"
+        android:button="@android:color/transparent"
+        android:textColor="@color/text" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/specialHandlingTV"
+        android:paddingLeft="10dp"
+        android:layout_gravity="center_vertical"
+        android:ellipsize="end"
+        android:singleLine="true"
+        style="@style/NoPaddingTextViewStyle"/>
+
+</LinearLayout>

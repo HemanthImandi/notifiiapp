@@ -1,0 +1,99 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">24dp</dimen>
+    <dimen name="activity_vertical_margin">24dp</dimen>
+    <dimen name="folder_type">720sp</dimen>
+
+    <!-- Per the design guidelines, navigation drawers should be between 240dp and 320dp:
+       https://developer.android.com/design/patterns/navigation-drawer.html -->
+    <dimen name="navigation_drawer_width">300dp</dimen>
+    <dimen name="toolbar_elevation">4dp</dimen>
+    <dimen name="player_image_Width">60dp</dimen>
+
+    <dimen name="actionbar_title">24sp</dimen>
+    <dimen name="actionbar_height">80dp</dimen>
+
+
+
+    <!--Log KioskPackage out list item TextView Size-->
+    <dimen name="pak_logout_list_item">20sp</dimen>
+    <dimen name="check_item_width">170dp</dimen>
+    <dimen name="name_width">250dp</dimen>
+    <dimen name="tag_number">150dp</dimen>
+    <dimen name="package_type">150dp</dimen>
+    <dimen name="shelf_width">100dp</dimen>
+    <dimen name="sender_width">150dp</dimen>
+    <dimen name="track_number_width">250dp</dimen>
+    <dimen name="mail_room">170dp</dimen>
+    <dimen name="receive_date">200dp</dimen>
+
+    <!--Log KioskPackage out details dimens-->
+    <dimen name="left_right_padding">16dp</dimen>
+
+
+    <dimen name="edittext_padding_pkg_login">10dp</dimen>
+    <dimen name="textsize_pkg_login">20sp</dimen>
+    <dimen name="textsize_pkg_notification">18sp</dimen>
+    <dimen name="edittext_pkg_login">24sp</dimen>
+
+
+
+    <dimen name="check_boX_size">45dp</dimen>
+    <dimen name="spinner_drop_down_width">500dp</dimen>
+    <dimen name="mail_room_spinner_drop_down_width">270dp</dimen>
+    <dimen name="pkg_pic_width">80dp</dimen>
+    <dimen name="pkg_pic_height">80dp</dimen>
+    <dimen name="signature_pad_height">150dp</dimen>
+    <dimen name="kiosk_signature_pad_height">330dp</dimen>
+    <dimen name="update_user_name_pwd_width">700dp</dimen>
+    <dimen name="progressbar_width_height">33dp</dimen>
+    <dimen name="pkg_logout_margin_bottom">70dp</dimen>
+    <dimen name="fullname_title_textSize">18sp</dimen>
+    <dimen name="fullName_textSize">20sp</dimen>
+    <dimen name="tab_title_textSize">24sp</dimen>
+    <dimen name="pkg_details_listview_height">310dp</dimen>
+    <dimen name="pkg_update_listview_height">360dp</dimen>
+    <dimen name="pkg_details_list_item_height">70dp</dimen>
+    <dimen name="pkg_update_list_item_height">73dp</dimen>
+    <dimen name="calendar_width_height">450dp</dimen>
+    <dimen name="profile_pic_height">130dp</dimen>
+    <dimen name="bounce_alert_height">30dp</dimen>
+    <dimen name="more_btn_margin">90dp</dimen>
+    <dimen name="small_padding">10dp</dimen>
+    <dimen name="more_btns_height">53dp</dimen>
+    <dimen name="search_height">48dp</dimen>
+    <dimen name="camera_icon_height">85dp</dimen>
+    <dimen name="spinner_height">53dp</dimen>
+    <dimen name="high_padding">13dp</dimen>
+    <dimen name="signature_view_height">135dp</dimen>
+    <dimen name="signature_border_height">139dp</dimen>
+    <dimen name="pkg_details_log_image_height">85dp</dimen>
+    <dimen name="login_margin">180dp</dimen>
+    <dimen name="edittext_height">52dp</dimen>
+
+    <dimen name="smaller_than_smallest_textsize">13sp</dimen>
+    <dimen name="smallest_textsize">14sp</dimen>
+    <dimen name="smaller_textsize">17sp</dimen>
+    <dimen name="small_textsize">18sp</dimen>
+    <dimen name="medium_textsize">20sp</dimen>
+    <dimen name="medium_above_textsize">21sp</dimen>
+    <dimen name="big_textsize">24sp</dimen>
+    <dimen name="bigger_textsize">25sp</dimen>
+    <dimen name="biggest_textsize">26sp</dimen>
+    <dimen name="more_scroll_margin_top">50dp</dimen>
+    <dimen name="calendar_spinner">25dp</dimen>
+    <dimen name="tab_min_width">400dp</dimen>
+    <dimen name="profile_item_padding">8dp</dimen>
+    <dimen name="medium_above_padding">30dp</dimen>
+    <dimen name="medium_paading">18dp</dimen>
+    <dimen name="contact_us_msg_height">100dp</dimen>
+    <dimen name="picture_icon_height">95dp</dimen>
+    <dimen name="pictures_title_margin">50dp</dimen>
+    <dimen name="more_screen_btns_height">57dp</dimen>
+    <dimen name="edit_icon_height">45dp</dimen>
+    <dimen name="email_message_padding">20dp</dimen>
+    <dimen name="actv_row_height">49dp</dimen>
+
+    <dimen name="button_height">52dp</dimen>
+
+</resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_pkg_condition"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/frame_margin">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="yes"
+        android:focusable="true"
+        android:contentDescription="Package Condition"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            style="@style/NoPaddingTextViewStyle"
+            android:text="@string/pkg_cond" />
+
+        <ImageView
+            android:id="@+id/starCondition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:scaleType="center"
+            android:src="@drawable/ic_star"
+            android:paddingLeft="5dp"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_marginTop="@dimen/item_margin"
+            android:layout_weight="1"
+            android:id="@+id/pkgcond_flayout"
+            android:background="@drawable/bg_edittext">
+
+            <Spinner
+                android:id="@+id/spinnerPackageCondition"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@null"
+                android:divider="#D3D3D3"
+                android:dividerHeight="1dp"
+                android:dropDownWidth="wrap_content"
+                android:popupBackground="@drawable/spinner_list" />
+
+            <TextView
+                android:id="@+id/pkgConditionText"
+                style="@style/NoPaddingTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:hint="@string/select_one"
+                android:contentDescription="Button to select package condition options"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp" />
+
+            <ImageView
+                android:id="@+id/pkgCondButtonDownArrow"
+                style="@style/DropDownArrowStyle"/>
+        </FrameLayout>
+
+    </LinearLayout>
+</LinearLayout>

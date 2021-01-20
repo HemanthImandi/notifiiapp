@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#075F9F</color>
+    <color name="status_bar_color">#06497D</color>
+    <color name="colorAccent">@color/colorPrimary</color>
+
+    <color name="app_bg_color">@color/colorPrimary</color>
+    <color name="black">@android:color/black</color>
+    <color name="white">@android:color/white</color>
+    <color name="yash_color">#CBCBCB</color>
+    <!-- <color name="text">#577599</color>-->
+    <color name="text">#445C92</color>
+    <color name="orange_color">#f26522</color>
+    <!-- <color name="list_header">#B9D4FF</color>-->
+    <color name="list_header">#a1d5fc</color>
+    <color name="list_header_light">#e3edff</color>
+    <color name="list_item_bg_color">#E6EFF7</color>
+    <color name="list_item_bg_selected_color">#ff48a9f7</color>
+    <color name="list_divider_color">#CED6DD</color>
+    <color name="list_cache_colorHint">#00000000</color>
+
+    <color name="warning_color">#F6E002</color>
+    <color name="success_color">#90DA3D</color>
+    <color name="signature_color">#9D0B0F</color>
+    <color name="list_item_selected_color">#F2F2F2</color>
+
+
+    <!-- tablet colors-->
+
+    <color name="myPrimaryColor">#065894</color>
+    <color name="myPrimaryDarkColor">#043E68</color>
+    <color name="myAccentColor">#065894</color>
+    <color name="myDrawerBackground">#F2F2F2</color>
+    <color name="myWindowBackground">#FFFFFF</color>
+    <color name="myTextPrimaryColor">#000000</color>
+    <color name="myNavigationColor">#000000</color>
+    <color name="DrawerArrowColor">#ffff1dc4</color>
+    <color name="ButtonColor">#FFFFFF</color>
+    <color name="CustomActionBarColor">#D5D5D5</color>
+    <color name="light_blue">#DFEBF9</color>
+    <color name="selected_gray">#ffdbdbdb</color>
+    <color name="red">#ff0000</color>
+    <color name="dark_grey">#ff646864</color>
+
+    <color name="button_selector">#1685d0</color>
+    <color name="button_bg">#319FEA</color>
+    <color name="button_border">#207CB9</color>
+    <color name="hint_color">#707070</color>
+    <color name="marketing_color">#a5afca</color>
+    <color name="lable_color">#577599</color>
+    <color name="log_pkg_out_others_color">#AFB6CB</color>
+    <color name="pkg_success_color">#90DA3D</color>
+    <color name="pkg_warning_color">#F5DF00</color>
+    <color name="background_color">#D0D7DD</color>
+    <color name="background_light_color">#F9FAFE</color>
+    <color name="no_preview_color">#B4C2CF</color>
+    <color name="info_color">#E67E22</color><!--B4C2CF-->
+    <color name="button_disable">#d1eafa</color>
+    <color name="bg_error">#F2DEDF</color>
+    <color name="bg_default">#808080</color>
+    <color name="success_green">#5CB66B</color>
+    <color name="kiosk_yellow">#FBFF8E</color>
+    <color name="mediumgrey">#767676</color>
+    <color name="semitransparent">#9A000000</color>
+    <color name="row_divider">#e5e5e5</color><!--c23-->
+    <color name="nopasswordcolor">#8598AD</color>
+
+</resources>

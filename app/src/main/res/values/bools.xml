@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="isTablet">false</bool>
+    <string name="screen">mobile</string>
+    <bool name="isMobile">true</bool>
+    <bool name="isMobilePreview">true</bool>
+    <bool name="isDeviceMobile">true</bool>
+    <bool name="isDeviceTablet">false</bool>
+</resources>

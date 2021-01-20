@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="selected_pkg">Selected Package(s)</string>
+    <string name="sign_below">Signature</string>
+    <string name="submit_sign">Done! Log Out Selected Packages</string>
+    <string name="clear_signature">Clear Signature</string>
+    <string name="list_view_mode">List View Modes</string>
+
+
+
+</resources>

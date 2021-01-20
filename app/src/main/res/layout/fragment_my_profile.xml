@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_main" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/main_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/layout_margin"
+            android:orientation="vertical">
+
+            <com.notifii.notifiiapp.customui.CircularImageView
+                android:layout_width="@dimen/profile_pic_height"
+                android:layout_height="@dimen/profile_pic_height"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_profile_place_holder" />
+
+            <LinearLayout
+                android:id="@+id/nameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margin"
+                android:background="@drawable/bg_edittext"
+                android:orientation="horizontal"
+                android:padding="@dimen/frame_margin">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewName"
+                        style="@style/avenirLightTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="0dp"
+                        android:text="@string/name" />
+
+                    <TextView
+                        android:id="@+id/userFullNameTV"
+                        style="@style/NoPaddingTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/nameArrow"
+                    android:layout_width="@dimen/profile_right_arrow_side"
+                    android:layout_height="@dimen/profile_right_arrow_side"
+                    android:layout_gravity="center_vertical"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_right_arrow_icon" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/uset_type_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/frame_margin"
+                android:background="@drawable/bg_et"
+                android:importantForAccessibility="yes"
+                android:orientation="vertical"
+                android:padding="@dimen/frame_margin">
+
+                <TextView
+                    android:id="@+id/textViewAccountType"
+                    style="@style/avenirLightTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:importantForAccessibility="no"
+                    android:text="@string/account_user_type" />
+
+                <TextView
+                    android:id="@+id/accountTypeTV"
+                    style="@style/NoPaddingTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:importantForAccessibility="no" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/emailLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/frame_margin"
+                android:background="@drawable/bg_edittext"
+                android:orientation="horizontal"
+                android:padding="@dimen/frame_margin">
+
+                <LinearLayout
+                    android:layout_width="331dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/background_light_color"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewEmail"
+                        style="@style/avenirLightTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_email" />
+
+                    <TextView
+                        android:id="@+id/emailTV"
+                        style="@style/NoPaddingTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/emailArrow"
+                    android:layout_width="@dimen/profile_right_arrow_side"
+                    android:layout_height="@dimen/profile_right_arrow_side"
+                    android:layout_gravity="center_vertical"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_right_arrow_icon" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/userNameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/frame_margin"
+                android:background="@drawable/bg_et"
+                android:orientation="horizontal"
+                android:padding="@dimen/frame_margin">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewUsername"
+                        style="@style/avenirLightTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/username" />
+
+                    <TextView
+                        android:id="@+id/userNameTV"
+                        style="@style/NoPaddingTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/userNameArrow"
+                    android:layout_width="@dimen/profile_right_arrow_side"
+                    android:layout_height="@dimen/profile_right_arrow_side"
+                    android:layout_gravity="center_vertical"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_right_arrow_icon" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/passwordLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/frame_margin"
+                android:background="@drawable/bg_edittext"
+                android:orientation="horizontal"
+                android:padding="@dimen/frame_margin">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewPassword"
+                        style="@style/avenirLightTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/password" />
+
+                    <TextView
+                        style="@style/NoPaddingTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="*****" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/passwordArrow"
+                    android:layout_width="@dimen/right_arrow_side"
+                    android:layout_height="@dimen/profile_right_arrow_side"
+                    android:layout_gravity="center_vertical"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_right_arrow_icon" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

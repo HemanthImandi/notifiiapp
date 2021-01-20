@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="20dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_mailRoom"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/frame_margin"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="MailRoom star"
+            android:focusable="true"
+            android:importantForAccessibility="yes">
+
+            <TextView
+                style="@style/NoPaddingTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mailroom" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:paddingLeft="5dp"
+                android:src="@drawable/ic_star" />
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:id="@+id/mailroom_flayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_marginTop="@dimen/item_margin"
+            android:background="@drawable/bg_edittext">
+
+            <Spinner
+                android:id="@+id/spinnerMailRoom"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@null"
+                android:divider="#D3D3D3"
+                android:dividerHeight="1dp"
+                android:popupBackground="@drawable/spinner_list" />
+
+            <TextView
+                android:id="@+id/mailroomText"
+                style="@style/NoPaddingTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:contentDescription="Button to select mailroom options"
+                android:gravity="center_vertical"
+                android:hint="@string/select_one"
+                android:paddingLeft="10dp" />
+
+            <ImageView
+                android:id="@+id/mailRoomButtonDownArrow"
+                style="@style/DropDownArrowStyle"/>
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_basic_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+<!--    <Button
+        android:id="@+id/buttonAdvancedOption"
+        style="@style/ButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="@dimen/log_pkg_in_margin_top"
+        android:background="@android:color/transparent"
+        android:contentDescription="expand advanced option"
+        android:gravity="center_vertical"
+        android:text="@string/show_advanced_options"
+        android:textColor="@color/text" />-->
+
+    <TextView
+        android:id="@+id/buttonAdvancedOption"
+        style="@style/NoPaddingTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="Expand advanced options button"
+        android:text="@string/show_advanced_options" />
+
+    <LinearLayout
+        android:id="@+id/ll_advanced_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:tag="0"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/buttonLogPkgIn"
+        style="@style/ButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="@string/submit" />
+
+</LinearLayout>

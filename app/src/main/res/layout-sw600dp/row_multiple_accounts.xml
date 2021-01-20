@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:duplicateParentState="true"
+    android:focusable="true"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <RadioButton
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:layout_gravity="center_vertical"
+        android:buttonTint="@color/black"
+        android:clickable="false"
+        android:textColor="@color/text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/accountName"
+        android:textSize="@dimen/small_textsize"
+        style="@style/NoPaddingTextViewStyle"
+        android:layout_gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:textColor="@color/black" />
+
+</LinearLayout>

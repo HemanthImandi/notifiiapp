@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#EBEBEB"
+    android:id="@+id/parentLayout"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#477082"
+        android:fontFamily="@font/avenir_roman"
+        android:textSize="14dip"
+        android:text="sdsdss"
+        android:textStyle="bold" >
+    </TextView>
+
+</LinearLayout>

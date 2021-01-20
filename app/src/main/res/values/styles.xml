@@ -1,0 +1,228 @@
+<resources>
+
+    <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/button_bg</item>
+        <item name="colorPrimaryDark">@color/button_selector</item>
+        <item name="colorAccent">@color/button_selector</item>
+        <item name="dropDownListViewStyle">@style/mySpinnerStyle</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListViewStyle</item>
+    </style>
+
+    <style name="DialogTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="ProgressHUD" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="mySpinnerStyle" parent="android:Widget.ListView.DropDown">
+        <item name="android:dividerHeight">1dp</item>
+        <item name="android:dropDownWidth">wrap_content</item>
+        <item name="android:divider">#D3D3D3</item>
+    </style>
+
+    <style name="DropDownListViewStyle">
+        <item name="android:dividerHeight">1dp</item>
+        <item name="android:divider">#D3D3D3</item>
+    </style>
+
+    <style name="Theme.MyDialog" parent="@style/Theme.AppCompat.Dialog">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowMinWidthMajor">97%</item>
+        <item name="android:windowMinWidthMinor">60%</item>
+    </style>
+
+    <style name="SplashTheme" parent="AppTheme.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+
+    <style name="MultiLineEditTextStyle" parent="@android:style/Widget.EditText">
+        <item name="android:fontFamily">@font/avenir_roman</item>
+        <item name="android:layout_height">@dimen/contact_us_msg_height</item>
+        <item name="android:ems">10</item>
+        <item name="android:gravity">top</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:background">@drawable/bg_edittext</item>
+        <item name="android:inputType">textCapSentences|textMultiLine</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/medium_textsize</item>
+    </style>
+
+    <style name="EditTextStyle" parent="@android:style/Widget.EditText">
+        <item name="android:fontFamily">@font/avenir_roman</item>
+        <item name="android:textSize">@dimen/medium_textsize</item>
+        <item name="android:paddingTop">@dimen/login_edit_padding</item>
+        <item name="android:paddingBottom">@dimen/login_edit_padding</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textColorHint">@color/hint_color</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:background">@drawable/bg_edittext</item>
+        <item name="android:textColorHighlight">@color/colorPrimary</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:cursorVisible">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:ems">10</item>
+    </style>
+
+    <style name="TextViewStyle" parent="@android:style/Widget.TextView">
+        <item name="android:fontFamily">@font/avenir_roman</item>
+        <item name="android:textSize">@dimen/medium_textsize</item>
+        <item name="android:paddingTop">@dimen/login_edit_padding</item>
+        <item name="android:paddingBottom">@dimen/login_edit_padding</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textColorHint">@color/hint_color</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="ButtonStyle" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:fontFamily">@font/avenir_medium</item>
+        <item name="android:textSize">@dimen/medium_textsize</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/bg_button</item>
+        <item name="android:gravity">center</item>
+        <item name="android:height">@dimen/more_btns_height</item>
+        <item name="android:layout_height">@dimen/button_height</item>
+        <item name="android:layout_marginTop">30dp</item>
+    </style>
+
+    <style name="NoPaddingTextViewStyle" parent="@android:style/Widget.TextView">
+        <item name="android:fontFamily">@font/avenir_roman</item>
+        <item name="android:textSize">@dimen/medium_textsize</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColorHint">@color/hint_color</item>
+    </style>
+
+    <style name="DropDownArrowStyle">
+        <item name="android:layout_width">@dimen/close_icon_width</item>
+        <item name="android:layout_height">@dimen/close_icon_width</item>
+        <item name="android:layout_gravity">right|center</item>
+        <item name="android:layout_marginRight">9dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:src">@drawable/ic_spinner_down_arrow</item>
+        <item name="android:importantForAccessibility">no</item>
+    </style>
+
+    <style name="ClearEditTextStyle">
+        <item name="android:layout_width">@dimen/close_icon_width</item>
+        <item name="android:layout_height">@dimen/close_icon_width</item>
+        <item name="android:layout_gravity">end|center_vertical</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:src">@drawable/ic_clear</item>
+        <item name="android:contentDescription">@string/cleartext</item>
+    </style>
+
+    <style name="avenirLightTextViewStyle" parent="@android:style/Widget.TextView">
+        <item name="android:fontFamily">@font/avenir_light</item>
+        <item name="android:textSize">@dimen/medium_textsize</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColorHint">@color/hint_color</item>
+    </style>
+
+    <style name="avenirHeavyTextViewStyle" parent="@android:style/Widget.TextView">
+        <item name="android:fontFamily">@font/avenir_85_heavy</item>
+        <item name="android:textSize">@dimen/medium_textsize</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColorHint">@color/hint_color</item>
+        <!--<item name="android:paddingRight">10dp</item>-->
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="avenirMediumTextViewStyle" parent="@android:style/Widget.TextView">
+        <item name="android:fontFamily">@font/avenir_medium</item>
+        <item name="android:textSize">@dimen/medium_textsize</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColorHint">@color/hint_color</item>
+    </style>
+
+
+    //TextView in Package Logout List Item
+
+    <style name="PackLoginTextView" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textSize">@dimen/small_textsize</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:fontFamily">@font/avenir_roman</item>
+    </style>
+    //Check box
+
+    <style name="CheckBoxPkgLogIn" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textSize">@dimen/medium_textsize</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:drawableLeft">@drawable/ic_checkbox_selector</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:fontFamily">@font/avenir_roman</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">middle</item>
+    </style>
+
+    <style name="Style.EdiText" parent="@android:style/Widget.EditText">
+        <!--  <item name="android:gravity">center_vertical|center_horizontal</item>-->
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textColorHint">#ff9abad2</item>
+        <!--  <item name="android:shadowColor">#FF000000</item>-->
+        <item name="android:textSize">@dimen/medium_textsize</item>
+        <item name="android:padding">@dimen/medium_paading</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:background">@drawable/bg_et</item>
+
+    </style>
+
+    <style name="AppTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/small_textsize</item>
+        <item name="android:tag">@string/avenir_roman</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="Widget.CameraView" parent="android:Widget">
+        <item name="android:adjustViewBounds">false</item>
+        <item name="facing">back</item>
+        <item name="aspectRatio">4:3</item>
+        <item name="autoFocus">true</item>
+        <item name="flash">auto</item>
+    </style>
+
+    <style name="CustomDialog" parent="android:Theme.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:adjustViewBounds">true</item>
+    </style>
+
+
+    <string name="cleartext">Clear text</string>
+</resources>

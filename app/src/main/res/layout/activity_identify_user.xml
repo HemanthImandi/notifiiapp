@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activities.IdentifyUserActivity">
+
+    <include layout="@layout/toolbar_main" />
+
+    <FrameLayout
+        android:id="@+id/errormessageFL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/layout_margin"
+        android:background="@drawable/bg_errors">
+
+        <TextView
+            style="@style/NoPaddingTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="You must select a resident."
+            android:textColor="@color/red" />
+
+        <TextView
+            android:id="@+id/closeerrorTV"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:clickable="true"
+            android:padding="10dp"
+            android:text="X"
+            android:textColor="@color/red"
+            android:textSize="@dimen/medium_textsize" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/boldtext"
+        style="@style/NoPaddingTextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/layout_margin"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:layout_marginRight="@dimen/layout_margin"
+        android:text="@string/idenify_yourself"
+        android:textColor="@color/black"
+        android:textSize="@dimen/kiosk_heading_textsize" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/layout_margin"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_recipientName"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/recipient_bg"
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textViewAutoCompleteRecipient"
+                style="@style/NoPaddingTextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp" />
+
+            <ImageView
+                android:id="@+id/imageButtonClear"
+                style="@style/ClearEditTextStyle"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/editTextRecipientNameFL"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_weight="1">
+
+            <com.notifii.notifiiapp.customui.CustomAutoCompleteTextView
+                android:id="@+id/editTextRecipientName"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/avenir_85_heavy"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/recipientNameClear"
+                android:visibility="gone"
+                style="@style/ClearEditTextStyle"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/edittextHintTV"
+                android:text="@string/identifyrecipienthint"
+                android:textColor="@color/hint_color"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:focusableInTouchMode="false"
+                android:maxLines="1"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/avenir_roman"
+                android:ellipsize="end"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonsLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/layout_margin"
+        android:layout_weight="1"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/startoverBTN"
+            style="@style/ButtonStyle"
+            android:layout_width="0dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="#aea0a0"
+            android:text="@string/startover"
+            android:textColor="@color/black"
+            android:textSize="@dimen/biggest_textsize"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/submitBTN"
+            style="@style/ButtonStyle"
+            android:layout_width="0dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="2"
+            android:background="@drawable/bg_kioskbutton"
+            android:text="@string/next"
+            android:textSize="@dimen/biggest_textsize"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

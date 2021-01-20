@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="isTablet">true</bool>
+    <string name="screen">10_inches_Tab</string>
+    <bool name="isMobile">false</bool>
+    <bool name="isMobilePreview">false</bool>
+    <bool name="isDeviceMobile">false</bool>
+    <bool name="isDeviceTablet">true</bool>
+</resources>

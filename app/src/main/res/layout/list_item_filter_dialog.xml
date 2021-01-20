@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/filter_list_item_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/medium_paading"
+        android:tag="@string/avenir_roman"
+        android:background="@drawable/bg_edittext"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/filter_list_item_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/NoPaddingTextViewStyle"
+            android:layout_marginLeft="@dimen/medium_paading"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

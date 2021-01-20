@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_main" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/camera_icon_height">
+
+        <EditText
+            android:id="@+id/editText_update_name"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_gravity="center"
+            android:contentDescription="@string/text_new_name"
+            android:hint="@string/text_new_name"
+            android:imeOptions="actionDone" />
+
+        <EditText
+            android:id="@+id/editText_update_email"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:contentDescription="@string/text_new_email"
+            android:hint="@string/text_new_email"
+            android:imeOptions="actionDone"
+            android:inputType="textEmailAddress" />
+
+
+        <Button
+            android:id="@+id/button_update_name_email_submit"
+            style="@style/ButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/medium_above_padding"
+            android:text="@string/action_submit" />
+
+    </LinearLayout>
+
+</LinearLayout>

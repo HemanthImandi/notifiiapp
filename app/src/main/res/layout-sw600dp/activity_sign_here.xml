@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:signature="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:id="@+id/parentLayoutLL"
+    tools:context=".activities.SignHereActivity">
+
+    <include layout="@layout/toolbar_main" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/errormessageFL"
+                android:background="@drawable/bg_errors"
+                android:visibility="invisible">
+
+                <TextView
+                    style="@style/NoPaddingTextViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="You must sign below."
+                    android:textColor="@color/red" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="X"
+                    android:id="@+id/closeerrorTV"
+                    android:padding="10dp"
+                    android:contentDescription="@string/Close_error_messsage"
+                    android:clickable="true"
+                    android:layout_gravity="end"
+                    style="@style/NoPaddingTextViewStyle"
+                    android:textColor="@color/red"/>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/boldtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/signhere"
+                style="@style/NoPaddingTextViewStyle"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="@dimen/kiosk_heading_textsize"/>
+
+            <TextView
+                android:id="@+id/disclaimer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/NoPaddingTextViewStyle"
+                android:maxLines="8"
+                android:minLines="1"
+                android:scrollbars = "vertical"
+                android:text="@string/sighheretext"
+                android:textColor="@color/black"/>
+
+            <FrameLayout
+                android:id="@+id/camera_preview"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/log_pkg_in_margin_top"
+                android:background="@color/black" />
+
+            <FrameLayout
+                android:id="@+id/tab_sign_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/log_pkg_in_margin_top"
+                android:background="@drawable/bg_et"
+                android:padding="3dp"
+                android:visibility="visible">
+
+                <com.notifii.notifiiapp.customui.SignaturePad
+                    android:id="@+id/signature_pad"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/kiosk_signature_pad_height"
+                    signature:penColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/tab_clear_sign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|top"
+                    android:layout_margin="3dp"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp"
+                    android:contentDescription="clear signature"
+                    android:paddingTop="5dp"
+                    android:src="@drawable/ic_refresh_small_icon"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/textView_sign_here"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    style="@style/NoPaddingTextViewStyle"
+                    android:text="SIGN HERE"
+                    android:textColor="@color/yash_color"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/mobile_sign_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/log_pkg_in_margin_top"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/signatureImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/signaturepad_height"
+                    android:background="@drawable/bg_et"
+                    android:padding="2dp"
+                    android:scaleType="fitXY"
+                    android:visibility="gone" />
+
+
+                <ImageView
+                    android:id="@+id/mobile_clear_sign"
+                    android:layout_width="@dimen/left_right_padding"
+                    android:layout_height="@dimen/left_right_padding"
+                    android:layout_gravity="right|top"
+                    android:layout_margin="10dp"
+                    android:contentDescription="clear signature"
+                    android:src="@drawable/ic_refresh_small_icon"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_click_to_sign"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/bg_tap_here_btn_selector"
+                    android:gravity="center"
+                    android:text="@string/click_to_sign"
+                    style="@style/ButtonStyle"
+                    android:layout_marginTop="0dp"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:visibility="visible" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="20dp">
+
+                <Button
+                    android:id="@+id/startoverBTN"
+                    android:text="@string/startover"
+                    android:layout_width="0dp"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:background="#aea0a0"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/biggest_textsize"
+                    android:textColor="@color/black"
+                    style="@style/ButtonStyle"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:text="@string/submit"
+                    style="@style/ButtonStyle"
+                    android:layout_gravity="bottom"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="@dimen/biggest_textsize"
+                    android:layout_weight="2"
+                    android:background="@drawable/bg_kioskbutton"
+                    android:id="@+id/submitBTN"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+</LinearLayout>

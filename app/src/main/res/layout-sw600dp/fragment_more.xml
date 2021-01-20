@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_main" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_account"
+                style="@style/NoPaddingTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:importantForAccessibility="yes"
+                android:focusable="true"
+                android:fontFamily="@font/avenir_85_heavy"
+                android:layout_marginRight="15dp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/textView_user"
+                style="@style/NoPaddingTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:importantForAccessibility="yes"
+                android:focusable="true"
+                android:layout_marginTop="10dp"
+                android:layout_weight="2"/>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="100dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layout_resident_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:importantForAccessibility="yes"
+                    android:background="@drawable/bg_more_buttons_grey"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/button_resident_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/more_screen_btns_height"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="13dp"
+                        android:importantForAccessibility="no"
+                        style="@style/NoPaddingTextViewStyle" />
+
+                    <ImageView
+                        android:id="@+id/view_resident_arrow"
+                        android:layout_width="@dimen/right_arrow_side"
+                        android:layout_height="@dimen/right_arrow_side"
+                        android:layout_marginRight="20dp"                        android:layout_gravity="center"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_right_arrow_icon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_new_resident"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:importantForAccessibility="yes"
+                    android:contentDescription="Add New Resident Button"
+                    android:background="@drawable/bg_more_button_white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/button_new_resident"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/more_screen_btns_height"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="13dp"
+                        android:importantForAccessibility="no"
+                        android:text="@string/action_add_new_resident"
+                        style="@style/NoPaddingTextViewStyle"/>
+
+                    <ImageView
+                        android:id="@+id/add_resident_arrow"
+                        android:layout_width="@dimen/right_arrow_side"
+                        android:layout_height="@dimen/right_arrow_side"
+                        android:layout_marginRight="20dp"                        android:layout_gravity="center"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_right_arrow_icon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_search_resident"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:importantForAccessibility="yes"
+                    android:contentDescription="Search Resident Button"
+                    android:background="@drawable/bg_more_buttons_grey"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/button_search_resident"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/more_screen_btns_height"
+                        style="@style/NoPaddingTextViewStyle"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="13dp"
+                        android:importantForAccessibility="no"
+                        android:text="@string/search_resident" />
+
+                    <ImageView
+                        android:id="@+id/search_resident_arrow"
+                        android:layout_width="@dimen/right_arrow_side"
+                        android:layout_height="@dimen/right_arrow_side"
+                        android:layout_marginRight="20dp"
+                        android:layout_gravity="center"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_right_arrow_icon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_pkg_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:importantForAccessibility="yes"
+                    android:contentDescription="Package History Button"
+                    android:background="@drawable/bg_more_button_white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/button_package_history"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/more_screen_btns_height"
+                        style="@style/NoPaddingTextViewStyle"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="13dp"
+                        android:importantForAccessibility="no"
+                        android:text="@string/action_package_history"/>
+
+                    <ImageView
+                        android:id="@+id/pkg_history_arrow"
+                        android:layout_width="@dimen/right_arrow_side"
+                        android:layout_height="@dimen/right_arrow_side"
+                        android:layout_marginRight="20dp"
+                        android:layout_gravity="center"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_right_arrow_icon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_contact_us"
+                    android:layout_width="match_parent"
+                    android:importantForAccessibility="yes"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:contentDescription="Contact Us Button"
+                    android:background="@drawable/bg_more_buttons_grey"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/button_contact_us"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/more_screen_btns_height"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="13dp"
+                        android:importantForAccessibility="no"
+                        style="@style/NoPaddingTextViewStyle"
+                        android:text="@string/action_contact_us" />
+
+                    <ImageView
+                        android:id="@+id/contact_us_arrow"
+                        android:layout_width="@dimen/right_arrow_side"
+                        android:layout_height="@dimen/right_arrow_side"
+                        android:layout_marginRight="20dp"
+                        android:layout_gravity="center"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_right_arrow_icon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:importantForAccessibility="yes"
+                    android:contentDescription="My Profile Button"
+                    android:background="@drawable/bg_more_button_white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/button_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/more_screen_btns_height"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="13dp"
+                        android:importantForAccessibility="no"
+                        android:text="@string/my_profile"
+                        style="@style/NoPaddingTextViewStyle"/>
+
+                    <ImageView
+                        android:id="@+id/profile_arrow"
+                        android:layout_width="@dimen/right_arrow_side"
+                        android:layout_height="@dimen/right_arrow_side"
+                        android:layout_marginRight="20dp"
+                        android:layout_gravity="center"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_right_arrow_icon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/switch_accounts"
+                    android:importantForAccessibility="yes"
+                    android:contentDescription="My Profile Button"
+                    android:background="@drawable/bg_more_buttons_grey"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/button_switch_accounts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/more_screen_btns_height"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="15dp"
+                        style="@style/NoPaddingTextViewStyle"
+                        android:importantForAccessibility="no"
+                        android:text="@string/switch_accounts" />
+
+                    <ImageView
+                        android:layout_width="@dimen/right_arrow_side"
+                        android:layout_height="@dimen/right_arrow_side"
+                        android:layout_marginRight="20dp"
+                        android:layout_gravity="center"
+                        android:id="@+id/switch_accounts_arrow"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_right_arrow_icon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_refresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:importantForAccessibility="yes"
+                    android:contentDescription="Refresh App Data Button"
+                    android:background="@drawable/bg_more_buttons_grey"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/button_refresh"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/more_screen_btns_height"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="13dp"
+                        android:importantForAccessibility="no"
+                        android:text="@string/refresh_app_data"
+                        style="@style/NoPaddingTextViewStyle"/>
+
+                    <ImageView
+                        android:id="@+id/refresh_arrow"
+                        android:layout_width="@dimen/right_arrow_side"
+                        android:layout_height="@dimen/right_arrow_side"
+                        android:layout_marginRight="20dp"
+                        android:layout_gravity="center"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_right_arrow_icon" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/button_update_username"
+                    style="@style/ButtonStyle"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/bg_button"
+                    android:fontFamily="@font/avenir"
+                    android:text="@string/action_update_username"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/button_update_password"
+                    style="@style/ButtonStyle"
+                    android:layout_width="300dp"
+                    android:layout_height="@dimen/pkg_pic_width"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/bg_button"
+                    android:fontFamily="@font/avenir"
+                    android:text="@string/action_update_password"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-80dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_account_tools_logout"
+                style="@style/ButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:paddingLeft="35dp"
+                android:paddingRight="35dp"
+                android:text="@string/action_logout" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/version_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:importantForAccessibility="yes"
+            android:focusable="true"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NoPaddingTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:importantForAccessibility="no"
+                android:text="@string/text_version" />
+
+            <TextView
+                android:id="@+id/textView_version"
+                style="@style/NoPaddingTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:importantForAccessibility="no"
+                android:paddingLeft="7dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

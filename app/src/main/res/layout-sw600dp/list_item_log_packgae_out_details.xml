@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/pkg_details_list_item_height"
+    android:layout_marginTop="@dimen/item_margin"
+    android:layout_marginLeft="@dimen/item_margin"
+    android:background="@drawable/bg_edittext"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewName"
+            style="@style/NoPaddingTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="asdfsdfsd"
+            android:textColor="@color/lable_color"
+            android:textSize="@dimen/small_textsize"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/NoPaddingTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Tracking #: "
+                android:textColor="@color/lable_color"
+                android:textSize="@dimen/small_textsize" />
+
+            <TextView
+                android:id="@+id/textViewTrackNumber"
+                style="@style/NoPaddingTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="middle"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textColor="@color/lable_color"
+                android:textSize="@dimen/small_textsize" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/imageButtonClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="@android:color/transparent"
+        android:contentDescription="remove package from the list"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="X"
+        android:textColor="@color/hint_color"
+        android:textSize="@dimen/biggest_textsize" />
+
+</LinearLayout>

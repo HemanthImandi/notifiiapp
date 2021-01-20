@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:clickable="true"
+    android:minWidth="1000dp"
+    android:orientation="vertical"
+    android:padding="@dimen/layout_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/boldtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:layout_weight="1"
+            android:text="@string/kiosklogoutheading"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            style="@style/NoPaddingTextViewStyle"/>
+
+        <TextView
+            android:id="@+id/dialogcloseTV"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="fill"
+            android:gravity="center"
+            android:text="X"
+            style="@style/NoPaddingTextViewStyle"
+            android:contentDescription="Close"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/biggest_textsize" />
+
+    </LinearLayout>
+
+    <com.notifii.notifiiapp.customui.CustomAutoCompleteTextView
+        android:id="@+id/usernameET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/frame_margin"
+        android:hint="Username"
+        style="@style/EditTextStyle"/>
+
+    <EditText
+        android:id="@+id/passwordET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/frame_margin"
+        android:hint="Password"
+        android:inputType="textPassword"
+        style="@style/EditTextStyle" />
+
+    <FrameLayout
+        android:id="@+id/spinnerFL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/frame_margin"
+        android:contentDescription="Button to select stay logged in options"
+        android:background="@drawable/bg_edittext">
+
+        <Spinner
+            android:id="@+id/logouttimeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:popupBackground="@drawable/spinner_list"
+            android:divider="@color/row_divider"
+            android:dividerHeight="1dp"
+            android:spinnerMode="dropdown"
+            android:background="@null"
+            android:layout_gravity="bottom" />
+
+        <TextView
+            android:id="@+id/spinnerText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select One"
+            android:paddingRight="25dp"
+            style="@style/TextViewStyle"
+            android:gravity="center_vertical"/>
+
+        <ImageView
+            android:id="@+id/logouttimeIV"
+            style="@style/DropDownArrowStyle"/>
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:text="Exit Kiosk Mode"
+        style="@style/ButtonStyle"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ssoCredentials"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/frame_margin"
+            android:layout_weight="1"
+            android:text="[Provide SSO credentials instead]"
+            android:textColor="@color/no_preview_color"
+            style="@style/NoPaddingTextViewStyle" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

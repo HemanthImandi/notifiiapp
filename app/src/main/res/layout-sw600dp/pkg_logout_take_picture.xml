@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/gap1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/picture_1"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <FrameLayout
+                android:id="@+id/fl_1"
+                android:contentDescription="@string/picture_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/image_pick1"
+                    android:layout_width="@dimen/contact_us_msg_height"
+                    android:contentDescription="@string/picture_1"
+                    android:layout_height="@dimen/contact_us_msg_height"
+                    android:background="@android:color/transparent"
+                    android:padding="5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_camera_icon" />
+
+                <ImageView
+                    android:id="@+id/imageButtonClose1"
+                    android:layout_width="@dimen/progressbar_width_height"
+                    android:layout_height="@dimen/progressbar_width_height"
+                    android:layout_gravity="right"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_close"
+                    android:contentDescription="@string/remove_pic"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/gap2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/picture_2"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/high_padding"
+            android:gravity="left">
+
+            <FrameLayout
+                android:id="@+id/fl_2"
+                android:layout_width="wrap_content"
+                android:contentDescription="@string/picture_2"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/image_pick2"
+                    android:layout_width="@dimen/contact_us_msg_height"
+                    android:layout_height="@dimen/contact_us_msg_height"
+                    android:contentDescription="@string/picture_2"
+                    android:background="@android:color/transparent"
+                    android:padding="5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_camera_icon" />
+
+                <ImageView
+                    android:id="@+id/imageButtonClose2"
+                    android:layout_width="@dimen/progressbar_width_height"
+                    android:layout_height="@dimen/progressbar_width_height"
+                    android:layout_gravity="right"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/remove_pic"
+                    android:src="@drawable/ic_close"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/gap3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/picture_3"
+            android:layout_marginLeft="@dimen/high_padding"
+            android:gravity="left">
+
+            <FrameLayout
+                android:id="@+id/fl_3"
+                android:layout_width="wrap_content"
+                android:contentDescription="@string/picture_3"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/image_pick3"
+                    android:layout_width="@dimen/contact_us_msg_height"
+                    android:layout_height="@dimen/contact_us_msg_height"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/picture_3"
+                    android:padding="5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_camera_icon" />
+
+                <ImageView
+                    android:id="@+id/imageButtonClose3"
+                    android:layout_width="@dimen/progressbar_width_height"
+                    android:layout_height="@dimen/progressbar_width_height"
+                    android:layout_gravity="right"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/remove_pic"
+                    android:src="@drawable/ic_close"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

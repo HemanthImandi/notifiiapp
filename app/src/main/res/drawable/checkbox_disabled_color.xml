@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true"
+        android:drawable="@drawable/ic_scan_icon" /> <!-- pressed -->
+    <item android:state_focused="true"
+        android:drawable="@drawable/ic_star" /> <!-- focused -->
+    <item android:state_hovered="true"
+        android:drawable="@drawable/ic_clear" /> <!-- hovered -->
+    <item android:state_enabled="false"
+        android:drawable="@drawable/search_package_active_btn" />
+    <item android:state_enabled="true"
+        android:drawable="@drawable/refresh" />
+    <item android:drawable="@drawable/ic_sort_icon" /> <!-- default -->
+</selector>

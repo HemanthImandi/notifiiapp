@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activities.IdentifyUserActivity">
+
+    <include layout="@layout/toolbar_main" />
+
+    <FrameLayout
+        android:id="@+id/errormessageFL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/layout_margin"
+        android:background="@drawable/bg_errors"
+        android:visibility="invisible">
+
+        <TextView
+            style="@style/NoPaddingTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="You must checkmark at least one package."
+            android:textColor="@color/red" />
+
+        <TextView
+            android:id="@+id/closeerrorTV"
+            style="@style/NoPaddingTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:clickable="true"
+            android:contentDescription="@string/Close_error_messsage"
+            android:padding="10dp"
+            android:text="X"
+            android:textColor="@color/red" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/headinglineTV"
+        style="@style/NoPaddingTextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/layout_margin"
+        android:text="@string/selectpackages"
+        android:textColor="@color/black"
+        android:textSize="@dimen/kiosk_heading_textsize"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/selectpackages_LV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+
+        <TextView
+            android:id="@+id/noPackagesFoundTV"
+            style="@style/NoPaddingTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="No Packages found"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonsLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="20dp">
+
+        <Button
+            android:id="@+id/startoverBTN"
+            style="@style/ButtonStyle"
+            android:layout_width="0dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="#aea0a0"
+            android:text="@string/startover"
+            android:textColor="@color/black"
+            android:textSize="@dimen/biggest_textsize"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/submitBTN"
+            style="@style/ButtonStyle"
+            android:layout_width="0dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="2"
+            android:background="@drawable/bg_kioskbutton"
+            android:text="@string/next"
+            android:textSize="@dimen/biggest_textsize"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

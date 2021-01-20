@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/parentLayout"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/signatureView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/closeImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="3dp"
+            android:paddingLeft="@dimen/medium_paading"
+            android:paddingRight="@dimen/medium_paading"
+            style="@style/NoPaddingTextViewStyle"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:text="X"
+            android:textColor="@color/dark_grey"
+            android:background="@color/white"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/clear_button"
+            android:layout_width="wrap_content"
+            android:background="@drawable/clear_button_selector"
+            android:gravity="center"
+            android:paddingLeft="35dp"
+            android:tag="@string/avenir_roman"
+            android:paddingRight="35dp"
+            android:text="@string/clear"
+            android:layout_marginTop="0dp"
+            style="@style/ButtonStyle" />
+
+        <Button
+            android:id="@+id/done_button"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="5dp"
+            android:paddingLeft="35dp"
+            android:layout_marginLeft="20dp"
+            android:paddingRight="35dp"
+            android:text="@string/done"
+            android:layout_marginTop="0dp"
+            style="@style/ButtonStyle"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_linear"
+    android:layout_width="@dimen/calendar_width_height"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/calendar_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/cal_background"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cal_week_background"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/header"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/cal_header"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/previous"
+                        android:layout_width="@dimen/progressbar_width_height"
+                        android:layout_height="@dimen/progressbar_width_height"
+                        android:background="@drawable/ic_cal_left_arrow"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:fontFamily="@font/avenir_roman"
+                        android:textColor="@android:color/white" />
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/startDateFarmeLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_cal_dropdown_field">
+
+                    <Spinner
+                        android:id="@+id/month_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:background="@null"
+                        android:divider="#D3D3D3"
+                        android:dividerHeight="1dp"
+                        android:popupBackground="@drawable/spinner_list" />
+
+                    <TextView
+                        android:id="@+id/textView_month_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/bounce_alert_height"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/text"
+                        android:textColorHint="#D5D5D5"
+                        style="@style/NoPaddingTextViewStyle"
+                        android:textSize="@dimen/small_textsize" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/endDate_frame_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_cal_dropdown_field">
+
+                    <Spinner
+                        android:id="@+id/year_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:background="@null"
+                        android:divider="#D3D3D3"
+                        android:dividerHeight="1dp"
+                        android:popupBackground="@drawable/spinner_list" />
+
+                    <TextView
+                        android:id="@+id/textView_year_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/bounce_alert_height"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/text"
+                        android:textColorHint="#D5D5D5"
+                        style="@style/NoPaddingTextViewStyle"
+                        android:textSize="@dimen/small_textsize" />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/next"
+                        android:layout_width="@dimen/progressbar_width_height"
+                        android:layout_height="@dimen/progressbar_width_height"
+                        android:background="@drawable/ic_cal_right_arrow"
+                        android:clickable="true"
+                        android:gravity="center|right"
+                        android:padding="@dimen/medium_paading"
+                        style="@style/NoPaddingTextViewStyle"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:background="@drawable/cal_week_background"
+                android:padding="5dp">
+
+                <TextView
+                    style="@style/calendar.text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/avenir_roman"
+                    android:text="Sun" />
+
+                <TextView
+                    style="@style/calendar.text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/avenir_roman"
+                    android:text="Mon" />
+
+                <TextView
+                    style="@style/calendar.text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/avenir_roman"
+                    android:text="Tue" />
+
+                <TextView
+                    style="@style/calendar.text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/avenir_roman"
+                    android:text="Wed" />
+
+                <TextView
+                    style="@style/calendar.text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/avenir_roman"
+                    android:text="Thu" />
+
+                <TextView
+                    style="@style/calendar.text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:fontFamily="@font/avenir_roman"
+                    android:text="Fri" />
+
+                <TextView
+                    style="@style/calendar.text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:fontFamily="@font/avenir_roman"
+                    android:text="Sat" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/gridview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:background="#CFCFCF"
+            android:gravity="center"
+            android:horizontalSpacing="2dp"
+            android:numColumns="7"
+            android:verticalSpacing="2dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

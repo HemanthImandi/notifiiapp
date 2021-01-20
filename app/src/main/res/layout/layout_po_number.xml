@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_poNumber"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/frame_margin">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="yes"
+        android:focusable="true"
+        android:contentDescription="PO Number"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="@string/po_no"
+            style="@style/NoPaddingTextViewStyle"/>
+
+        <ImageView
+            android:id="@+id/starPONumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:scaleType="center"
+            android:paddingLeft="5dp"
+            android:src="@drawable/ic_star"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTextPONumber"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:layout_marginTop="@dimen/item_margin"
+        android:imeOptions="actionDone"
+        android:tag="@string/avenir_roman"
+        android:contentDescription="PO number"
+        style="@style/EditTextStyle"/>
+
+</LinearLayout>

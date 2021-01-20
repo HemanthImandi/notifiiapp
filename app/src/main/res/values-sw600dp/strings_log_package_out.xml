@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="tag_number">Tag Number</string>
+    <string name="package_type">Package Type</string>
+    <string name="lpo_shelf">Shelf:</string>
+    <string name="track_number">Tracking Number</string>
+    <string name="main_room">Mailroom</string>
+    <string name="date_received">Date Received</string>
+    <!--<string name="date_picked_up">Date Picked Up</string>-->
+    <string name="singn_out_selected_pck">Continue With Selected Packages</string>
+    <string name="go">Go</string>
+</resources>

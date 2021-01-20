@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/parentLayout"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="@dimen/progressbar_width_height"
+            android:layout_height="@dimen/progressbar_width_height"
+            android:layout_gravity="top"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_checkbox_selector"
+            android:button="@android:color/transparent"
+            android:textColor="@color/text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tracking #: "
+                    style="@style/NoPaddingTextViewStyle"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/big_textsize"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/trackingTV"
+                    style="@style/NoPaddingTextViewStyle"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/big_textsize"
+                    android:textColor="@color/mediumgrey"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/mailroomLL"
+                android:visibility="gone"
+                android:padding="3dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mailroom: "
+                    android:textStyle="bold"
+                    style="@style/NoPaddingTextViewStyle"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:id="@+id/mailroomTV"
+                    style="@style/NoPaddingTextViewStyle"
+                    android:textColor="@color/mediumgrey"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/tagNumberLL"
+                android:padding="3dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tag #: "
+                    style="@style/NoPaddingTextViewStyle"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/big_textsize"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/tagTV"
+                    style="@style/NoPaddingTextViewStyle"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/big_textsize"
+                    android:textColor="@color/mediumgrey"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/shelfLL"
+                android:padding="3dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shelf: "
+                    style="@style/NoPaddingTextViewStyle"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/big_textsize"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/shelfTV"
+                    style="@style/NoPaddingTextViewStyle"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/big_textsize"
+                    android:textColor="@color/mediumgrey"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Received: "
+                    style="@style/NoPaddingTextViewStyle"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/big_textsize"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/receivedTV"
+                    style="@style/NoPaddingTextViewStyle"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/big_textsize"
+                    android:textColor="@color/mediumgrey"/>
+
+            </LinearLayout>o
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_pictures"
+                style="@style/NoPaddingTextViewStyle"
+                android:textStyle="bold"
+                android:padding="3dp"
+                android:id="@+id/log_in_pics_label"
+                android:visibility="gone"
+                android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/loginpicturesLayout">
+
+                <FrameLayout
+                    android:id="@+id/frame_login_image1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/pkg_details_log_image_height"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp">
+
+                    <ProgressBar
+                        android:id="@+id/login_image1_progressbar"
+                        android:layout_width="@dimen/progressbar_width_height"
+                        android:layout_height="@dimen/progressbar_width_height"
+                        android:layout_gravity="center" />
+
+                    <ImageView
+                        android:id="@+id/imageView1loginImage"
+                        android:layout_width="@dimen/pkg_details_log_image_height"
+                        android:layout_height="@dimen/pkg_details_log_image_height"
+                        android:clickable="true"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frame_login_image2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/pkg_details_log_image_height"
+                    android:layout_margin="5dp"
+                    android:visibility="gone">
+
+                    <ProgressBar
+                        android:id="@+id/login_image2_progressbar"
+                        android:layout_width="@dimen/progressbar_width_height"
+                        android:layout_height="@dimen/progressbar_width_height"
+                        android:layout_gravity="center" />
+
+                    <ImageView
+                        android:id="@+id/imageView2loginImage"
+                        android:layout_width="@dimen/pkg_details_log_image_height"
+                        android:layout_height="@dimen/pkg_details_log_image_height"
+                        android:clickable="true"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frame_login_image3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/pkg_details_log_image_height"
+                    android:layout_margin="5dp"
+                    android:visibility="gone">
+
+                    <ProgressBar
+                        android:id="@+id/login_image3_progressbar"
+                        android:layout_width="@dimen/progressbar_width_height"
+                        android:layout_height="@dimen/progressbar_width_height"
+                        android:layout_gravity="center" />
+
+                    <ImageView
+                        android:id="@+id/imageView3loginImage"
+                        android:layout_width="@dimen/pkg_details_log_image_height"
+                        android:layout_height="@dimen/pkg_details_log_image_height"
+                        android:clickable="true"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop" />
+
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/et_rounded_corners"
+    android:minWidth="1000dp"
+    android:orientation="vertical"
+    android:padding="@dimen/layout_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/NoPaddingTextViewStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/filter_results"
+            android:textSize="@dimen/biggest_textsize" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:contentDescription="close filter"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            android:src="@drawable/ic_close_icon" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:background="@drawable/bg_edittext"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/item_margin"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spinner_pkgs_type"
+            style="@style/mySpinnerStyle"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="top"
+            android:background="@null"
+            android:divider="#D3D3D3"
+            android:dropDownWidth="match_parent"
+            android:gravity="top"
+            android:popupBackground="@drawable/spinner_list"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:id="@+id/tv_pkg_type"
+            style="@style/NoPaddingTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_gravity="center"
+            android:contentDescription="Button to select package history type"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:hint="Select One"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true" />
+
+        <ImageView
+            android:id="@+id/filterResultsButtonDownArrow"
+            style="@style/DropDownArrowStyle"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/mail_room_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/frame_margin"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/textView_mail_room"
+            style="@style/NoPaddingTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/text_mail_room"
+            android:textColor="@color/log_pkg_out_others_color" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/item_margin"
+            android:background="@drawable/bg_edittext">
+
+            <Spinner
+                android:id="@+id/mail_room_spinner"
+                style="@style/mySpinnerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="top"
+                android:background="@null"
+                android:divider="#D3D3D3"
+                android:dropDownWidth="match_parent"
+                android:gravity="top"
+                android:popupBackground="@drawable/spinner_list"
+                android:spinnerMode="dropdown" />
+
+            <TextView
+                android:id="@+id/tv_mail_room"
+                style="@style/NoPaddingTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_gravity="center"
+                android:contentDescription="Button to select mailroom options"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="Select One"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true" />
+
+            <ImageView
+                android:id="@+id/mailRoom_ButtonDownArrow"
+                style="@style/DropDownArrowStyle"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/NoPaddingTextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/frame_margin"
+        android:text="@string/between"
+        android:textColor="@color/log_pkg_out_others_color" />
+
+    <TextView
+        android:id="@+id/tv_from_date"
+        style="@style/NoPaddingTextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:layout_marginTop="@dimen/item_margin"
+        android:background="@drawable/bg_edittext"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="02/08/2016" />
+
+    <TextView
+        style="@style/NoPaddingTextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/frame_margin"
+        android:text="@string/and"
+        android:textColor="@color/log_pkg_out_others_color"
+        android:textSize="@dimen/medium_textsize" />
+
+    <TextView
+        android:id="@+id/tv_to_date"
+        style="@style/NoPaddingTextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:layout_marginTop="@dimen/item_margin"
+        android:background="@drawable/bg_edittext"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="02/08/2016" />
+
+    <TextView
+        style="@style/NoPaddingTextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/frame_margin"
+        android:text="@string/filter_by"
+        android:textColor="@color/log_pkg_out_others_color"/>
+
+    <FrameLayout
+        android:id="@+id/pkgstatus_flayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/item_margin"
+        android:background="@drawable/bg_edittext">
+
+        <Spinner
+            android:id="@+id/spinner_filter"
+            style="@style/mySpinnerStyle"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="top"
+            android:background="@null"
+            android:divider="#D3D3D3"
+            android:dropDownWidth="match_parent"
+            android:gravity="top"
+            android:popupBackground="@drawable/spinner_list"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:id="@+id/tv_filter"
+            style="@style/NoPaddingTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_gravity="center"
+            android:contentDescription="Button to select filter by options"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:hint="Select One"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true" />
+
+        <ImageView
+            android:id="@+id/listAllPkgsButtonDownArrow"
+            style="@style/DropDownArrowStyle"/>
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_update"
+        style="@style/ButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:layout_marginTop="20dp"
+        android:text="@string/update" />
+</LinearLayout>

@@ -1,0 +1,17 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">24dp</dimen>
+    <dimen name="activity_vertical_margin">24dp</dimen>
+    <dimen name="folder_type">800sp</dimen>
+    <dimen name="smaller_than_smallest_textsize">12sp</dimen>
+    <dimen name="smallest_textsize">13sp</dimen>
+    <dimen name="smaller_textsize">16sp</dimen>
+    <dimen name="small_textsize">17sp</dimen>
+    <dimen name="medium_textsize">18sp</dimen>
+    <dimen name="medium_above_textsize">19sp</dimen>
+    <dimen name="big_textsize">20sp</dimen>
+    <dimen name="bigger_textsize">21sp</dimen>
+    <dimen name="biggest_textsize">22sp</dimen>
+    <dimen name="drop_down_item_height">46dp</dimen>
+
+</resources>

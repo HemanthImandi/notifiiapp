@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_main" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/layout_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_text"
+                style="@style/NoPaddingTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/text_contact_us_text" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/frame_margin"
+                android:contentDescription="Name Star"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView_name"
+                    style="@style/NoPaddingTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_name" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:paddingLeft="5dp"
+                    android:src="@drawable/ic_star" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/editText_name"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginTop="@dimen/item_margin"
+                android:contentDescription="Name"
+                android:inputType="textCapSentences|textPersonName" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/frame_margin"
+                android:contentDescription="Email Star"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView_email"
+                    style="@style/NoPaddingTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_email" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:paddingLeft="5dp"
+                    android:src="@drawable/ic_star" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/editText_email"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginTop="@dimen/item_margin"
+                android:contentDescription="Email"
+                android:inputType="textNoSuggestions|textEmailAddress" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/frame_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView_phone"
+                    style="@style/NoPaddingTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/text_phone"
+                    android:text="@string/text_phone" />
+
+                <ImageView
+                    android:layout_width="@dimen/madatory_icon_width_height"
+                    android:layout_height="@dimen/madatory_icon_width_height"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/editText_phone"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginTop="@dimen/item_margin"
+                android:contentDescription="Phone"
+                android:inputType="textNoSuggestions|phone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/frame_margin"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="Message Star"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView_message"
+                        style="@style/NoPaddingTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_message" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:paddingLeft="5dp"
+                        android:src="@drawable/ic_star" />
+
+                </LinearLayout>
+
+               <!-- <EditText
+                    android:id="@+id/editText_message"
+                    style="@style/EditTextStyle"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/contact_us_msg_height"
+                    android:contentDescription="Message"
+                    android:gravity="left"
+                    android:padding="10dp"
+                    android:singleLine="false"
+                    android:maxLines="5"
+                 />-->
+
+                <EditText
+                    android:id="@+id/editText_message"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/item_margin"
+                    android:contentDescription="Message"
+                    style="@style/MultiLineEditTextStyle"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_contactUs_submit"
+                style="@style/ButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/action_submit" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:importantForAccessibility="no"
+        android:fontFamily="@font/avenir_roman" />
+</LinearLayout>

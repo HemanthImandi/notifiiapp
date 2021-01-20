@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hint_user_name">Username</string>
+    <string name="hint_user_pwd">Password</string>
+    <string name="btn_str_login">Login</string>
+    <string name="error_user_name_field_required">Please Enter your Username</string>
+    <string name="error_pwd_field_required">Please Enter your Password</string>
+
+</resources>
