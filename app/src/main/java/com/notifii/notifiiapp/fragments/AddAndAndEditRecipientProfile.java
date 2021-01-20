@@ -203,6 +203,7 @@ public class AddAndAndEditRecipientProfile extends NTF_BaseFragment implements A
         super.onCreate(savedInstanceState);
         Bundle bundle = getArguments();
         if (bundle != null) {
+            // git test
             mRecipient = bundle.getParcelable(Extras_Keys.KEY_RECIPIENT);
         }
     }
